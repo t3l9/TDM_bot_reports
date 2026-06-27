@@ -1,0 +1,27 @@
+# Зависимости для TDM-версии бота аналитики
+# Установка: pip install -r requirements_tdm.txt
+
+# SSE-клиент для получения событий в реальном времени
+sseclient-py==1.8.0
+
+# HTTP-запросы
+requests>=2.31.0
+
+# Переменные окружения
+python-dotenv>=1.0.0
+
+# Обработка данных (те же, что и в оригинале)
+pandas==2.1.4
+openpyxl==3.1.2
+
+# Selenium для парсинга порталов
+selenium==4.15.2
+webdriver-manager==4.0.1
+
+# Windows COM (для создания PDF через Excel)
+pywin32==306
+
+# Для слайдов ОАТИ
+python-pptx
+matplotlib
+comtypes
