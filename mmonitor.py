@@ -65,42 +65,41 @@ def parcing_data_MM_sync(MM_start_date: str, MM_end_date: str,
         login_button = driver.find_element(By.XPATH, "/html/body/main/div/div[2]/div/form[1]/div[5]/div[1]/button")
         login_button.click()
 
+
         WebDriverWait(driver, 20).until(EC.presence_of_element_located(
-            (By.XPATH, "/html/body/div[1]/div/section/section/main/div/div[1]/div[2]/span[1]")))
+            (By.XPATH, "/html/body/div[1]/div/section/section/main/div[2]/div[1]/div[2]/span[1]")))
         time.sleep(0.3)
 
         driver.find_element(By.XPATH,
-            "/html/body/div[1]/div/section/section/main/div/div[1]/div[2]/span[1]").click()
+            "/html/body/div[1]/div/section/section/main/div[2]/div[1]/div[2]/span[1]").click()
 
         driver.find_element(By.XPATH,
-            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[4]/span/div/div").click()
+            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[3]/div/div").click()
         time.sleep(0.5)
 
         driver.find_element(By.XPATH,
-            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[4]/span/div/div"
-            "/div[2]/div/div/div/div[2]/div[1]/div/div/div[3]/div").click()
+            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[3]/div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div[3]").click()
         time.sleep(1)
 
         b1 = driver.find_element(By.XPATH,
-            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[4]/div/div[1]/div/input")
+            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/div[3]/label/div/div[1]/div/input")
         b1.click(); b1.send_keys(Keys.CONTROL + "a"); b1.send_keys(Keys.BACKSPACE)
         time.sleep(0.3)
         b1.send_keys(MM_start_date)
         time.sleep(0.5)
 
         b2 = driver.find_element(By.XPATH,
-            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[4]/div/div[2]/div/input")
+            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/div[3]/label/div/div[2]/div/input")
         b2.click(); b2.send_keys(Keys.CONTROL + "a"); b2.send_keys(Keys.BACKSPACE)
         time.sleep(0.3)
         b2.send_keys(MM_end_date)
 
         driver.find_element(By.XPATH,
-            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[13]/div/div[1]/div").click()
+            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[12]/div").click()
         time.sleep(0.5)
 
         driver.find_element(By.XPATH,
-            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[13]/div/div[2]"
-            "/div/div/div/div[2]/div[1]/div/div/div[2]/div").click()
+            "/html/body/div[2]/div/div[2]/div/div/div[2]/div[1]/label[12]/div/div[2]/div/div/div/div[2]/div[1]/div/div/div[2]").click()
         time.sleep(0.5)
 
         driver.find_element(By.XPATH,
